@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parcial de Gestión de Bases de Datos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <h1>Parcial de Gestión de Bases de Datos</h1>
+            <p>3.º año · Tecnicatura Superior en Desarrollo y Programación de Aplicaciones</p>
+        </div>
+    </header>
+    <main>
+        <section class="card" id="student">
+            <h2>Datos del estudiante</h2>
+            <div class="grid">
+                <label for="nombre">Nombre<input id="nombre" type="text" autocomplete="given-name" required></label>
+                <label for="apellido">Apellido<input id="apellido" type="text" autocomplete="family-name" required></label>
+                <label for="dni">DNI<input id="dni" type="text" inputmode="numeric" autocomplete="off" required></label>
+            </div>
+            <p class="note">Son 30 preguntas de igual valor. Revisá tus respuestas antes de entregar.</p>
+            <button id="start" type="button">Comenzar parcial</button>
+        </section>
+        <section class="card" id="exam" hidden>
+            <strong id="progressText">Respondidas 0 de 30</strong>
+            <div class="bar"><div id="progress"></div></div>
+            <p class="note">Podés cambiar las respuestas hasta entregar.</p>
+            <form id="form">
+                <div id="questions"></div>
+                <button id="submit" type="submit">Entregar y corregir</button>
+            </form>
+        </section>
+        <section class="card" id="result" aria-live="polite" hidden>
+            <h2>Resultado del parcial</h2>
+            <div class="score" id="pct"></div>
+            <p id="message"></p>
+            <div class="stats">
+                <div>Correctas<strong id="right"></strong></div>
+                <div>Incorrectas o sin responder<strong id="wrong"></strong></div>
+                <div>Total<strong id="total">30</strong></div>
+            </div>
+            <p class="note" id="saveStatus" role="status"></p>
+            <button id="printButton" type="button">Imprimir resultado</button>
+        </section>
+    </main>
+</body>
+</html>
